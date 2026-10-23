@@ -1,6 +1,6 @@
 {
-  "versionCode": 5,
-  "versionName": "1.4",
+  "versionCode": 6,
+  "versionName": "1.5",
   "apkUrl": "https://raw.githubusercontent.com/Paapiverma/ReelSort/main/app-release.apk",
-  "changelog": "Significantly larger thumbnail cards (104x146dp) and enhanced visibility."
+  "changelog": "Tabloid magazine card feed with 300dp full-width hero cover images."
 }

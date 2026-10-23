@@ -27,4 +27,12 @@
     <style name="RoundedCornerImage">
         <item name="cornerSize">12dp</item>
     </style>
+
+    <!-- Rounded top corners for tabloid card hero images -->
+    <style name="RoundedCornerTopImage">
+        <item name="cornerSizeTopLeft">18dp</item>
+        <item name="cornerSizeTopRight">18dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
 </resources>

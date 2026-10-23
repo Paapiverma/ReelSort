@@ -43,6 +43,7 @@ class ReelAdapter(
                 try {
                     val bmp = BitmapFactory.decodeFile(thumbFile.absolutePath)
                     if (bmp != null) {
+                        b.ivThumbnail.scaleType = android.widget.ImageView.ScaleType.CENTER_CROP
                         b.ivThumbnail.setImageBitmap(bmp)
                         b.ivThumbnail.imageTintList = null
                         b.ivThumbnail.background = null
@@ -61,6 +62,7 @@ class ReelAdapter(
         }
 
         private fun setDefaultThumbnail() {
+            b.ivThumbnail.scaleType = android.widget.ImageView.ScaleType.CENTER
             b.ivThumbnail.setImageResource(R.drawable.ic_bookmark)
             b.ivThumbnail.imageTintList = b.root.context.getColorStateList(R.color.icon_tint)
             b.ivThumbnail.setBackgroundResource(R.drawable.bg_icon_badge)
