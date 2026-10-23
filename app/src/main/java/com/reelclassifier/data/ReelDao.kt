@@ -9,7 +9,7 @@ interface ReelDao {
     fun getByCategory(category: String): LiveData<List<Reel>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(reel: Reel)
+    suspend fun insert(reel: Reel): Long
 
     @Delete
     suspend fun delete(reel: Reel)

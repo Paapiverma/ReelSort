@@ -61,16 +61,13 @@ class SaveReelActivity : AppCompatActivity() {
             val appContext = applicationContext
             lifecycleScope.launch(Dispatchers.IO) {
                 if (newCat != null) db.categoryDao().insert(Category(cat))
-                db.reelDao().insert(Reel(url = url, category = cat, note = noteText))
+                val reelId = db.reelDao().insert(Reel(url = url, category = cat, note = noteText)).toInt()
 
                 // Capture thumbnail in background
                 ThumbnailHelper.capture(appContext, url) { path ->
                     if (path != null) {
                         CoroutineScope(Dispatchers.IO).launch {
-                            val saved = db.reelDao().getReelsWithoutThumbnails().find { it.url == url }
-                            if (saved != null) {
-                                db.reelDao().updateThumbnail(saved.id, path)
-                            }
+                            db.reelDao().updateThumbnail(reelId, path)
                         }
                     }
                 }

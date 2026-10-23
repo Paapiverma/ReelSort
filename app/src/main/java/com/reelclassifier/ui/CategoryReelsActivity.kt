@@ -39,8 +39,11 @@ class CategoryReelsActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
         db.reelDao().getByCategory(category).observe(this) { reels ->
             adapter.submitList(reels)
-            // Background load thumbnails for reels that don't have one yet
-            reels.filter { it.thumbnailPath.isNullOrEmpty() }.forEach { reel ->
+            // Background load thumbnails for reels that don't have one or have invalid file
+            reels.filter {
+                val p = it.thumbnailPath
+                p.isNullOrEmpty() || !java.io.File(p).exists() || java.io.File(p).length() < 1000
+            }.forEach { reel ->
                 ThumbnailHelper.capture(applicationContext, reel.url) { path ->
                     if (path != null) {
                         lifecycleScope.launch(Dispatchers.IO) {

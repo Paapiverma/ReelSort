@@ -38,11 +38,17 @@ class ReelAdapter(
             b.tvDate.text = dateFmt.format(Date(reel.savedAt))
 
             // Load thumbnail image if available
-            if (!reel.thumbnailPath.isNullOrEmpty() && File(reel.thumbnailPath).exists()) {
+            val thumbFile = reel.thumbnailPath?.let { File(it) }
+            if (thumbFile != null && thumbFile.exists() && thumbFile.length() > 1000) {
                 try {
-                    val bmp = BitmapFactory.decodeFile(reel.thumbnailPath)
-                    b.ivThumbnail.setImageBitmap(bmp)
-                    b.ivThumbnail.imageTintList = null
+                    val bmp = BitmapFactory.decodeFile(thumbFile.absolutePath)
+                    if (bmp != null) {
+                        b.ivThumbnail.setImageBitmap(bmp)
+                        b.ivThumbnail.imageTintList = null
+                        b.ivThumbnail.background = null
+                    } else {
+                        setDefaultThumbnail()
+                    }
                 } catch (_: Exception) {
                     setDefaultThumbnail()
                 }
@@ -57,6 +63,7 @@ class ReelAdapter(
         private fun setDefaultThumbnail() {
             b.ivThumbnail.setImageResource(R.drawable.ic_bookmark)
             b.ivThumbnail.imageTintList = b.root.context.getColorStateList(R.color.icon_tint)
+            b.ivThumbnail.setBackgroundResource(R.drawable.bg_icon_badge)
         }
     }
 
