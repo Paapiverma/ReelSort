@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern high-contrast theme supporting both Light & Dark modes -->
+    <style name="Theme.ReelSort" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- Dialog theme: SaveReelActivity appears as a floating popup over Instagram -->
+    <style name="Theme.ReelSort.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowMinWidthMajor">92%</item>
+        <item name="android:windowMinWidthMinor">92%</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="android:colorBackground">@color/card_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- Rounded corner style for reel thumbnail covers -->
+    <style name="RoundedCornerImage">
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>

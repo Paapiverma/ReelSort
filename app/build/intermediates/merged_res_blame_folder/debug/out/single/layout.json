@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.reelclassifier.app-mergeDebugResources-3:/layout/activity_save_reel.xml",
+        "source": "com.reelclassifier.app-main-6:/layout/activity_save_reel.xml"
+    },
+    {
+        "merged": "com.reelclassifier.app-mergeDebugResources-3:/layout/item_category.xml",
+        "source": "com.reelclassifier.app-main-6:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.reelclassifier.app-mergeDebugResources-3:/layout/activity_category_reels.xml",
+        "source": "com.reelclassifier.app-main-6:/layout/activity_category_reels.xml"
+    },
+    {
+        "merged": "com.reelclassifier.app-mergeDebugResources-3:/layout/activity_main.xml",
+        "source": "com.reelclassifier.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.reelclassifier.app-mergeDebugResources-3:/layout/item_reel.xml",
+        "source": "com.reelclassifier.app-main-6:/layout/item_reel.xml"
+    }
+]

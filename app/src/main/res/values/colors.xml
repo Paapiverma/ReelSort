@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Accents -->
+    <color name="primary">#4F46E5</color>          <!-- Indigo 600 -->
+    <color name="primary_dark">#3730A3</color>     <!-- Indigo 800 -->
+    <color name="accent">#EC4899</color>           <!-- Pink 500 -->
+
+    <!-- Light Theme Palette -->
+    <color name="background">#F1F5F9</color>       <!-- Clean cool Slate 100 -->
+    <color name="card_background">#FFFFFF</color>  <!-- Pure crisp White -->
+    <color name="card_stroke">#E2E8F0</color>      <!-- Slate 200 border for separation -->
+    <color name="icon_container_bg">#EEF2FF</color><!-- Soft Indigo badge background -->
+    <color name="icon_tint">#4F46E5</color>        <!-- Indigo bookmark icon -->
+
+    <color name="text_primary">#0F172A</color>     <!-- Slate 900 (High contrast bold text) -->
+    <color name="text_secondary">#334155</color>   <!-- Slate 700 (High contrast subtitle) -->
+    <color name="text_muted">#64748B</color>       <!-- Slate 500 -->
+    <color name="delete_icon_tint">#EF4444</color> <!-- Vibrant Red 500 -->
+
+    <!-- Common -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

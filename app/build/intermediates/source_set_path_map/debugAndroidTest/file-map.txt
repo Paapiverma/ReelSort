@@ -1,0 +1,4 @@
+com.reelclassifier.test.app-androidTest-0 C:\CLASSIFIER_APP\app\build\generated\res\resValues\androidTest\debug
+com.reelclassifier.test.app-mergeDebugAndroidTestResources-1 C:\CLASSIFIER_APP\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.reelclassifier.test.app-mergeDebugAndroidTestResources-2 C:\CLASSIFIER_APP\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.reelclassifier.test.app-merged_res-3 C:\CLASSIFIER_APP\app\build\intermediates\merged_res\debugAndroidTest
